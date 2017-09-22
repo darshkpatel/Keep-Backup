@@ -8,4 +8,4 @@ Just login to your google account on FireFox Web Browser and point the script to
 
 
 #### List Of Dependencies:
-* [Selenium](https://pypi.python.org/pypi/seleniu
+* [Selenium](https://pypi.python.org/pypi/seleniu)
