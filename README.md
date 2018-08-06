@@ -7,4 +7,5 @@ Just login to your google account on FireFox Web Browser and point the script to
 ## List Of Dependencies:
 * [firefox webdriver](https://github.com/mozilla/geckodriver/)
 * [Selenium](https://pypi.python.org/pypi/seleniu)
+
    ```pip install selenium```
