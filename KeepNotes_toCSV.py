@@ -60,7 +60,7 @@ def getNote(xnote, seperate_links):
             text = content.find_element_by_class_name('h1U9Be-YPqjbf').text
             link = ''
     except NoSuchElementException:
-        print "No Title In Note"
+        print("No Title In Note")
 
     note_list={'Title':title, 'Text':text,'Link':link}
     return note_list
@@ -74,14 +74,14 @@ while True:
     # Scroll down to bottom
     driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
 
-    print "Waiting for page to load"
+    print("Waiting for page to load")
     time.sleep(options.delay)
 
     notes = driver.find_elements_by_class_name('IZ65Hb-TBnied')
     for note in notes:
         final_notes.append(getNote(note, options.separate))
-        print "Appending Note"
-    print "Scrolling Down The Page"
+        print("Appending Note")
+    print("Scrolling Down The Page")
     # Calculate new scroll height and compare with last scroll height
     new_height = driver.execute_script("return document.body.scrollHeight")
     if new_height == last_height:
@@ -90,6 +90,8 @@ while True:
 
 
 keys = final_notes[0].keys()
+
+print("Saving Notes")
 with open('GoogleKeepNotes.csv', 'wb') as f:
     w=csv.DictWriter(f,keys)
     w.writeheader()
