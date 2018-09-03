@@ -9,3 +9,5 @@ Just login to your google account on FireFox Web Browser and point the script to
 * [Selenium](https://pypi.python.org/pypi/seleniu)
 
    ```pip install selenium```
+
+**Note: Script has only been tested with python2.7**
